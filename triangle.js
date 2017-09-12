@@ -6,7 +6,7 @@ function triangle(side1, side2, side3) {
         window.prompt("Kolmio on tasasivuinen.")
 
     } else if (isNan(side1 || side2 || side3)) {
-        window.prompt("Syötä kolmion kylkien pituudet numeroina, vitun urpo:");
+        window.alert("Syötä kolmion kylkien pituudet numeroina, vitun urpo:");
         triangle(window.prompt("Ensimmäisen kyljen pituus:"), window.prompt("Toisen kyljen pituus:"),
             window.prompt("Kolmannen kyljen pituus:"));
 
@@ -15,7 +15,7 @@ function triangle(side1, side2, side3) {
     }
 }
 
-window.prompt("Syötä kolmion kylkien pituudet numeroina, vitun urpo:");
+window.alert("Syötä kolmion kylkien pituudet numeroina, vitun urpo:");
 triangle(window.prompt("Ensimmäisen kyljen pituus:"), window.prompt("Toisen kyljen pituus:"),
     window.prompt("Kolmannen kyljen pituus:"));
 
