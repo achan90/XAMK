@@ -1,4 +1,4 @@
-function triangle(side1, side2.side3) {
+function triangle(side1, side2, side3) {
     if (side1 == side2 && side1 != side3 || side1 == side3 && side1 != side2 || side2 == side3 && side1 != side3) {
         window.prompt("Kolmio on tasakylkinen.");
 
@@ -18,5 +18,4 @@ function triangle(side1, side2.side3) {
 window.prompt("Syötä kolmion kylkien pituudet numeroina, vitun urpo:");
 triangle(window.prompt("Ensimmäisen kyljen pituus:"), window.prompt("Toisen kyljen pituus:"),
     window.prompt("Kolmannen kyljen pituus:"));
-
 
