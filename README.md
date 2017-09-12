@@ -1,0 +1,2 @@
+# XAMK
+School projects
