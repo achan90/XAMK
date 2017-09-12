@@ -1,9 +1,9 @@
 function triangle(side1, side2, side3) {
     if (side1 == side2 && side1 != side3 || side1 == side3 && side1 != side2 || side2 == side3 && side1 != side3) {
-        window.prompt("Kolmio on tasakylkinen.");
+        window.alert("Kolmio on tasakylkinen.");
 
     } else if (side1 && side2 == side3) {
-        window.prompt("Kolmio on tasasivuinen.")
+        window.alert("Kolmio on tasasivuinen.")
 
     } else if (isNan(side1 || side2 || side3)) {
         window.alert("Syötä kolmion kylkien pituudet numeroina, vitun urpo:");
