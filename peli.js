@@ -1,14 +1,11 @@
-/*Pekka Pousi
+//Pekka Pousi
+
+/*
 */
 
 
 //Määrittää tikkujen alkumäärän.
 var alkuMaara = 21
-
-//Varmistaa joka kierroksella poistuvan 4 tikkua, jolloin ohjelma ei voi hävitä.
-function pakotaNelja(x){
-	return 4 - x;
-}
 
 function siirto(nykyMaara, otan){
 	//Mikäli käyttäjä joutuu ottamaan viimeisen tikun, häviää hän pelin.
@@ -16,11 +13,11 @@ function siirto(nykyMaara, otan){
 	if (nykyMaara - otan < 1 && otan < 4){
 			return alert("Hävisit pelin!");
 	}else{
-		//Laskee tikkujen tämän hetkisen määrän ja määrittelee kuinka monta tikkua ohjelma ottaa.
-		var uusiMaara = nykyMaara - otan;
-		var koneOttaa = pakotaNelja(otan);
+		//Laskee tikkujen tämän hetkisen määrän ja varmistaa kierroksella poistuvan 4 tikkua, jolloin ohjelma ei voi hävitä.	
+		var uusiMaara = nykyMaara - otan;	
+		var koneOttaa = 4 - otan;
 		  
-		//Hyväksyy ainoastaan tietyt syötteet pelaajan ottamien tikkujen määräksi.
+		//Hyväksyy ainoastaan kokonaisluvut 1 - 3 pelaajan ottamien tikkujen määräksi.
 		if(otan == 1 || otan == 2 || otan == 3){			
 			nykyMaara = uusiMaara - koneOttaa;
 			
@@ -39,17 +36,17 @@ function siirto(nykyMaara, otan){
 			
 			//Ilmoittaa tämän hetkisen tikkujen määrän ja uudelleen kutsuu funktion päivitetyillä parametreilla.
 			}else{
-				return siirto(nykyMaara, parseInt(prompt("Kone otti " + koneOttaa + " Jäljellä on: " + nykyMaara
-					+"\nKuinka monta tikkua otat? (1-3)")));
+				return siirto(nykyMaara, prompt("Kone otti " + koneOttaa + " Jäljellä on: " + nykyMaara
+					+"\nKuinka monta tikkua otat? (1-3)"));
 			}
 		
 		//Pyytää uudet syötteet tarpeen vaatiessa.
   		}else{
-			otan = parseInt(prompt("Otapa uudestaan!"));
+			otan = prompt("Otapa uudestaan!");
 			siirto(nykyMaara, otan);
 		}	
 	}
 }
 
 //Käynnistää funktion ja kysyy käyttäjältä monta tikkua hän ottaa.
-siirto(alkuMaara, parseInt(prompt("Kuinka monta tikkua otat? (1-3)")));
+siirto(alkuMaara, prompt("Kuinka monta tikkua otat? (1-3)"));
